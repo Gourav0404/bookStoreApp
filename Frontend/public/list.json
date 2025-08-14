@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": " story book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 2,
+    "name": "react book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 3,
+    "name": "javascript book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 4,
+    "name": "css book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 30,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 5,
+    "name": "html book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 40,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 6,
+    "name": "angular book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 7,
+    "name": "vue book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 60,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 8,
+    "name": "nodejs book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 9,
+    "name": "express book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 80,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 10,
+    "name": "mongodb book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 90,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 11,
+    "name": "python book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 100,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 12,
+    "name": "django book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 13,
+    "name": "flask book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 14,
+    "name": "ruby book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 15,
+    "name": "rails book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0,
+    "category": "free",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 16,
+    "name": "go book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 200,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 17,
+    "name": "swift book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 250,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  }
+]
