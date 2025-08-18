@@ -1,0 +1,29 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "book store app",
+  "type": "module",
+  "homepage": "https://github.com/Gourav0404/bookStoreApp#readme",
+  "bugs": {
+    "url": "https://github.com/Gourav0404/bookStoreApp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gourav0404/bookStoreApp.git"
+  },
+  "license": "ISC",
+  "author": "Gourav Chouhan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1",
+    "nodemailer": "^7.0.5"
+  }
+}

@@ -1,24 +1,46 @@
 // 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Login from './Login';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const Signup = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/';
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    // Handle login logic here
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password
+    }
+    await axios.post("http://localhost:3000/user/signup", userInfo)
+      .then((res) => {
+        if (res.data) {
+          toast.success("Signup Successfully");
+          navigate(from, { replace: true });
+
+        }
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        if (err.response) {
+          toast.error("Error : " + err.response.data.message);
+        }
+      })
   };
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-100 to-gray-200">
+    <div className="flex items-center justify-center h-screen dark:bg-slate-950">
       <div className="relative w-[400px]">
-        <div className="modal_box bg-white shadow-xl rounded-xl p-6 border border-gray-200">
+        <div className="modal_box bg-white text-black shadow-xl rounded-xl p-6 border border-gray-200 dark:bg-slate-900">
           {/* Close Button */}
           <div className="absolute right-3 top-3">
             <Link
@@ -29,7 +51,7 @@ const Signup = () => {
             </Link>
           </div>
 
-          <h3 className="font-bold text-2xl text-gray-800 text-center">
+          <h3 className="font-bold text-2xl text-gray-800 dark:text-white text-center">
             Signup
           </h3>
 
@@ -40,10 +62,10 @@ const Signup = () => {
                 type="text"
                 placeholder="Enter Your Name"
                 className="input input-bordered w-full max-w-xs mx-auto rounded-lg border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition"
-                {...register("name", { required: true })}
+                {...register("fullname", { required: true })}
               />
               <br />
-              {errors.name && <span className='text-sm text-red-500'>This field is required</span>}
+              {errors.fullname && <span className='text-sm text-red-500'>This field is required</span>}
             </div>
             <div>
               <input
@@ -73,7 +95,7 @@ const Signup = () => {
                 Signup
               </button>
               <div className='flex gap-1'>
-                <p className="text-center text-gray-500">Have any Account ?</p>
+                <p className="text-center text-gray-700 dark:text-white">Have any Account ?</p>
                 <button
                   type="button"
                   onClick={() => document.getElementById('my_modal_3').showModal()}

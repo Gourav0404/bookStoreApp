@@ -4,10 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards";
-import list from "../../public/list.json";
+import axios from 'axios';
 
 const Freebook = () => {
-  const freeBooks = list.filter((book) => book.category === "free");
   const location = useLocation();
 
   // Detect initial slidesToShow based on window width
@@ -18,6 +17,7 @@ const Freebook = () => {
   };
 
   const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,6 +60,20 @@ const Freebook = () => {
     ],
   };
 
+  const [book, setBook] = useState([]);
+
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/book");
+        setBook(res.data.filter((book) => book.category === "free"));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getBook();
+  }, [])
+
   return (
     <div className="max-w-screen-2xl mx-auto container px-4 md:px-20">
       <div>
@@ -72,7 +86,7 @@ const Freebook = () => {
       <div className="slider-container">
         {/* Route change ke saath remount karne ke liye */}
         <Slider {...settings} key={location.key}>
-          {freeBooks.map((item) => (
+          {book.map((item) => (
             <Cards item={item} key={item.id} />
           ))}
         </Slider>

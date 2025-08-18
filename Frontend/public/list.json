@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": " story book",
+    "name": " Oops book",
     "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "price": 0,
     "category": "free",
@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "name": "rails book",
+    "name": "Sql book",
     "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "price": 0,
     "category": "free",
@@ -132,6 +132,38 @@
     "name": "swift book",
     "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "price": 250,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Math book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 280,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 19,
+    "name": "C++ book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 320,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 20,
+    "name": "C book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 340,
+    "category": "paid",
+    "image": "../public/freebookImage.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Java book",
+    "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 360,
     "category": "paid",
     "image": "../public/freebookImage.jpg"
   }
