@@ -15,7 +15,7 @@ const Login = () => {
       email: data.email,
       password: data.password
     }
-    await axios.post("https://book-store-app-peach-eta.vercel.app/user/login", userInfo)
+    await axios.post("http://localhost:3000/user/login", userInfo)
       .then((res) => {
         if (res.data) {
 
