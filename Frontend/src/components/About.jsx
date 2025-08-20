@@ -10,7 +10,7 @@ const About = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("https://book-store-app-wine-six.vercel.app/book");
+        const res = await axios.get("http://localhost:3000/book");
         setBook(res.data.filter((book) => book.category === "free"));
       } catch (error) {
         console.log(error);
