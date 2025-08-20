@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://book-store-app-wine-six.vercel.app/data/send", formData);
+      await axios.post("http://localhost:3000/data/send", formData);
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
