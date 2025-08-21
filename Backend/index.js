@@ -18,10 +18,7 @@ const port = process.env.PORT || 4000;
 const URI = process.env.MONGODBURI;
 
 try {
-  mongoose.connect(URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
+  mongoose.connect(URI);
   console.log("mongodb is connected");
 
 } catch (error) {

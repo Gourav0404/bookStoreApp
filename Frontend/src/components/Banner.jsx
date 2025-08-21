@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banner from '../../public/bannerImage.jpg';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
+  const [input, setInput] = useState('');
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  }
   return (
     <>
       <div className='max-w-screen-2xl mx-auto container px-4 md:px-20 flex md:flex-row flex-col my-12'>
@@ -21,7 +25,7 @@ const Banner = () => {
                 <path
                   d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
               </svg>
-              <input type="text" className="grow" placeholder="Enter Your Email to Login" />
+              <input value={input} type="text" onChange={handleChange} className="grow dark:text-black" placeholder="Enter Your Email to Login" />
             </label>
           </div>
           <Link to='/contact'>
