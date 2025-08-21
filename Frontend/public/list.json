@@ -5,7 +5,7 @@
     "title": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "price": 0,
     "category": "free",
-    "image": "../public/freebookImage.jpg"
+    "image": "/freebookImage.jpg"
   },
   {
     "id": 2,
