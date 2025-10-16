@@ -30,6 +30,10 @@ app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/data', formRoute);
 
+app.get('/' , (req,res) =>{
+  res.send("Api is running");
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port  ${port}`);
 });
